@@ -1,0 +1,116 @@
+body,
+html {
+  background: #ffffff;
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  
+}
+
+/* Jumbotron */
+
+.jumbotron {
+  height: 500px;
+  background:url('./images/restaurant2.jpg') no-repeat center;
+  margin-bottom: 0;
+}
+
+#jumbo-content {
+  margin-top: 100px;
+}
+
+.main-content {
+  background: #ffffff;
+  height: 100%;
+  margin-top: 30px;
+}
+
+.navbar-custom {
+  background-color: #0a6cff;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Sign In Form */
+
+.navbar .dropdown-menu .form-control {
+  width: 200px;
+}
+
+/* Tabbed Container */
+
+#menus {
+  background: #ffffff;
+}
+
+#favorites {
+  background: #e71717;
+}
+
+
+/* Search Bar */
+
+#search-bar {
+  margin-bottom: 50px;
+  outline: 0 none;
+}
+
+/* when not active use specificity to override the !important on border-(color) */
+
+.nav-tabs .nav-link:not(.active) {
+  border-color: transparent !important;
+}
+
+/* favorites layout box */
+
+.param {
+  margin-bottom: 7px;
+  line-height: 1.4;
+}
+
+.param-inline dt {
+  display: inline-block;
+}
+
+.param dt {
+  margin: 0;
+  margin-right: 7px;
+  font-weight: 600;
+}
+
+.param-inline dd {
+  vertical-align: baseline;
+  display: inline-block;
+}
+
+.param dd {
+  margin: 0;
+  vertical-align: baseline;
+}
+
+.shopping-cart-wrap .price {
+  color: #007bff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 5px;
+  display: block;
+}
+
+var {
+  font-style: normal;
+}
+
+.media img {
+  margin-right: 1rem;
+}
+
+.img-sm {
+  width: 90px;
+  max-height: 75px;
+  object-fit: cover;
+}

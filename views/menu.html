@@ -124,10 +124,10 @@
 
     <!-- Main-Content -->
 
-    <div class="container main main-raised">
+    <div class="container">
         <div class="main-content">
             <div class="card">
-
+                <div class="card-body">
                 <div class="row">
                     <div class="col-3">
                         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
@@ -140,22 +140,30 @@
 
                         </div>
                     </div>
-                    <div class="col-9 clearfix">
+                    <div class="col-9">
                         <div class="tab-content" id="v-pills-tabContent">
                             <div class="tab-pane fade show active" id="v-pills-tab1" role="tabpanel" aria-labelledby="v-pills-home-tab">
 
                                 <div class="card">
+                                
                                     <div class="card-header">
                                         Menu Results
                                     </div>
 
                                     <!-- Menu Table -->
 
-                                    <div class="bg-light clearfix">
-                                            <h3 class="float-left">Q39</h3>
-                                            <i class="float-right"><i class="fa fa-heart"></i>
-                                          </div>
 
+
+
+                                    <div class="d-flex justify-content-between" id="menu-restaurant-title">
+
+                                        <h3>Q39</h3>
+
+                                        <a title="" href="" class="btn btn-success" data-toggle="tooltip" data-original-title="Save to Favorites">
+                                            <i class="fa fa-heart"></i>
+                                        </a>
+
+                                    </div>
 
                                     <div class="row">
 
@@ -189,7 +197,7 @@
                                 </div>
                             </div>
 
-                            <!-- Favorites Tab -->
+                            <!-- Favorites Card -->
 
                             <div class="tab-pane fade" id="v-pills-tab2" role="tabpanel" aria-labelledby="v-pills-tab2-tab">
 
@@ -197,35 +205,34 @@
                                     <div class="card-header">
                                         Favorites
                                     </div>
-                                    <table class="table table-hover shopping-cart-wrap">
-                                        <thead class="text-muted">
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <figure class="media">
-                                                        <figcaption class="media-body">
-                                                            <h5 class="title text-truncate">Q39</h5>
-                                                        </figcaption>
-                                                    </figure>
 
-                                                    <!-- Restaurant Menu Items -->
+                                    <!-- Favorites List -->
 
+                                    <div class="d-flex justify-content-between" id="menu-restaurant-title">
 
+                                        <h3>Q39</h3>
 
-                                                    <!-- Icons -->
+                                        <a title="" href="" class="btn btn-danger" data-toggle="tooltip" data-original-title="Save to Favorites">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
 
-                                                    <td class="text-right">
-                                                        <a title="" href="" class="btn btn-danger" data-toggle="tooltip" data-original-title="Save to Favorites">
-                                                            <i class="fa fa-trash"></i>
-                                                        </a>
+                                    </div>
 
-                                                    </td>
-                                                </td>
+                                    <hr>
 
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <div class="d-flex justify-content-between" id="menu-restaurant-title">
+
+                                            <h3>Q39</h3>
+    
+                                            <a title="" href="" class="btn btn-danger" data-toggle="tooltip" data-original-title="Save to Favorites">
+                                                <i class="fa fa-trash"></i>
+                                            </a>
+    
+                                        </div>
+
+                                    <hr>  
+
+                                    <!-- End Favorites List -->
                                 </div>
 
                             </div>
@@ -234,7 +241,7 @@
                     </div>
                 </div>
             </div>
-
+</div>
         </div>
     </div>
 

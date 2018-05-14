@@ -33,12 +33,10 @@ p {
 
 /* Jumbotron */
 
-.jumbo-container {
-  background: #ff580a;
-}
+
 
 .jumbotron {
-  height: 500px;
+  border-radius: 0px;
   background: #ff580a;
   /* background:url('../css/hamburger.jpg') no-repeat center; */
   margin-bottom: 0;

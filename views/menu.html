@@ -13,7 +13,7 @@
 
     <!-- Google Fonts and Font Awesome stylesheet -->
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400|Roboto:500|Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:400|Roboto+Slab:400" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 
     <!-- Main stylesheet -->
@@ -128,117 +128,121 @@
         <div class="main-content">
             <div class="card">
                 <div class="card-body">
-                <div class="row">
-                    <div class="col-3">
-                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
-                            <a class="nav-link active" id="v-pills-tab1-tab" data-toggle="pill" href="#v-pills-tab1" role="tab" aria-controls="v-pills-tab1"
-                                aria-expanded="true">
-                                <i class="fa fa-table"></i>&nbspMenus</a>
-                            <a class="nav-link" id="v-pills-tab2-tab" data-toggle="pill" href="#v-pills-tab2" role="tab" aria-controls="v-pills-tab2"
-                                aria-expanded="true">
-                                <i class="fa fa-heart"></i>&nbspFavorites</a>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                                <a class="nav-link active" id="v-pills-tab1-tab" data-toggle="pill" href="#v-pills-tab1" role="tab" aria-controls="v-pills-tab1"
+                                    aria-expanded="true">
+                                    <i class="fa fa-table"></i>&nbspMenus</a>
+                                <a class="nav-link" id="v-pills-tab2-tab" data-toggle="pill" href="#v-pills-tab2" role="tab" aria-controls="v-pills-tab2"
+                                    aria-expanded="true">
+                                    <i class="fa fa-star"></i>&nbspFavorites</a>
 
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-9">
-                        <div class="tab-content" id="v-pills-tabContent">
-                            <div class="tab-pane fade show active" id="v-pills-tab1" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                        <div class="col-9">
+                            <div class="tab-content" id="v-pills-tabContent">
+                                <div class="tab-pane fade show active" id="v-pills-tab1" role="tabpanel" aria-labelledby="v-pills-home-tab">
 
-                                <div class="card">
-                                
-                                    <div class="card-header">
-                                        Menu Results
-                                    </div>
+                                    <div class="card">
 
-                                    <div class="d-flex justify-content-between" id="menu-restaurant-title"></div>
-                                    <div class="card-body">
+                                        <div class="card-header">
+                                            Menu Results
+                                        </div>
+
+                                        <div class="d-flex justify-content-between" id="menu-restaurant-title"></div>
+                                        <div class="card-body">
                                             <div class="row justify-content-between">
                                                 <div class="col-8">
-                                                    <h3>Restaurant Name</h3>
+                                                    <h4>Restaurant Name</h4>
                                                 </div>
                                                 <div class="col-4 text-right">
-                                                    <a title="" href="" class="btn btn-primary" data-toggle="tooltip" data-original-title="Save to Favorites">
-                                                        <i class="fa fa-heart"></i>
+                                                    <a title="" href="" class="btn btn-success" data-toggle="tooltip" data-placement="Save to Favorites">
+                                                        <i class="fa fa-star" title="Add to favorites"></i>
                                                     </a>
                                                 </div>
                                             </div>
-                                        </div>
-
-                                    <!-- Menu Table -->
-
-                                    <div class="d-flex justify-content-between" id="menu-restaurant-title">
-
-                                    </div>
-
-                                    <div class="row">
-
-                                        <div class="col-12" id="soup-salad">
-                                            <hr id="menu-horizontal-rule-1">
-                                            <h4>Soup and Salads</h4>
-                                            <p>Great as sides, entrees or even in-between-palette-cleansers.</p>
-                                        </div>
-                                        <div class="col-12">
-                                            <hr id="menu-horizontal-rule-2">
-                                        </div>
-                                        <div class="col-6" id="entrees">
-                                            <h5>Smoked Chicken Tortilla Soup</h5>
-                                            <p>Vegetables, black beans, crisp corn tortillas.</p>
-                                            <h5>$5.99</h5>
-                                            <hr>
-                                        </div>
-                                        <div class="col-6" id="entrees">
-
-                                            <h5>Q House Salad with Side</h5>
-                                            <p>Cherry tomatoes, pickled onion, cucumber, sharp cheddar, garlic croutons, balsamic
-                                                herb vinaigrette add sliced brisket, pulled pork or grilled chicken $12.00.</p>
-                                            <h5>$5.99</h5>
-                                            <hr>
-                                        </div>
-                                    </div>
 
 
-                                    <!-- End Menu -->
+                                            <!-- Menu Table -->
 
-                                </div>
-                            </div>
+                                            <div class="d-flex justify-content-between" id="menu-restaurant-title">
 
-                            <!-- Favorites Card -->
 
-                            <div class="tab-pane fade" id="v-pills-tab2" role="tabpanel" aria-labelledby="v-pills-tab2-tab">
 
-                                    <div class="container">
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="card">
-                                                        <div class="card-header">
-                                                            Favorite Restaurants
-                                                        </div>
-                                    
-                                                        <!-- Favorite Restaurant Card Info -->
-                                    
-                                                        <div class="card-body">
-                                                            <div class="row justify-content-between">
-                                                                <div class="col-8">
-                                                                    <h3>Restaurant Name</h3>
-                                                                </div>
-                                                                <div class="col-4 text-right">
-                                                                    <a title="" href="" class="btn btn-danger" data-toggle="tooltip" data-original-title="Save to Favorites">
-                                                                        <i class="fa fa-trash"></i>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                    
-                                                        <!-- End Restaurant Card Info -->
-                                    
+                                                <div class="row">
+
+                                                    <div class="col-sm-12" id="soup-salad">
+                                                        <hr id="menu-horizontal-rule-1">
+                                                        <h4>Soup and Salads</h4>
+                                                        <p>Great as sides, entrees or even in-between-palette-cleansers.</p>
                                                     </div>
-                                    
+
+                                                    <div class="col-sm-12">
+                                                        <hr id="menu-horizontal-rule-2">
+                                                    </div>
+                                                    <div class="col-sm-6" id="entrees">
+                                                        <h5>Smoked Chicken Tortilla Soup</h5>
+                                                        <p>Vegetables, black beans, crisp corn tortillas.</p>
+                                                        <h5>$5.99</h5>
+                                                        <hr>
+                                                    </div>
+                                                    <div class="col-sm-6" id="entrees">
+
+                                                        <h5>Q House Salad with Side</h5>
+                                                        <p>Cherry tomatoes, pickled onion, cucumber, sharp cheddar, garlic croutons,
+                                                            balsamic herb vinaigrette add sliced brisket, pulled pork or
+                                                            grilled chicken $12.00.</p>
+                                                        <h5>$5.99</h5>
+                                                        <hr>
+                                                    </div>
+
                                                 </div>
-                                    
+
+
+                                                <!-- End Menu -->
+
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+
+                                <!-- Favorites Card -->
+
+                                <div class="tab-pane fade" id="v-pills-tab2" role="tabpanel" aria-labelledby="v-pills-tab2-tab">
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    Favorite Restaurants
+                                                </div>
+
+                                                <!-- Favorite Restaurant Card Info -->
+
+                                                <div class="card-body">
+                                                    <div class="row justify-content-between">
+                                                        <div class="col-8">
+                                                            <h4>Restaurant Name</h4>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <a title="" href="" class="btn btn-danger" data-toggle="tooltip" data-original-title="Save to Favorites">
+                                                                <i class="fa fa-trash"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- End Restaurant Card Info -->
+
+                                            </div>
+
                                         </div>
-                                
+
+                                    </div>
+
+                                </div>
+
 
                             </div>
 
@@ -246,18 +250,18 @@
                     </div>
                 </div>
             </div>
-</div>
         </div>
+    </div>
     </div>
 
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-    crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
 
 </body>
 

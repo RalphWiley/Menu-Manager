@@ -1,6 +1,5 @@
 body,
 html {
-  font-family: "Open Sans", sans-serif;
   background: #ffffff;
   height: 100%;
   margin: 0;
@@ -14,13 +13,13 @@ html {
   font-family: 'Pacifico', cursive;
 }
 
-h1, h2, h4, h5 {
-  font-family: "Roboto", sans-serif;
+
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Roboto Slab', serif;
 }
 
-h3 {
-  font-family: "Open Sans", sans-serif;
-}
+
 
 p {
   font-family: "Open Sans", sans-serif;

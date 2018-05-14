@@ -9,6 +9,10 @@ html {
   
 }
 
+.navbar-toggler {
+  color: #ffffff;
+}
+
 .navbar-brand {
   font-family: 'Pacifico', cursive;
 }

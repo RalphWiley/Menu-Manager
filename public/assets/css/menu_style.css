@@ -2,7 +2,7 @@ body,
 html {
   background: #ffffff;
   height: 100%;
-  margin: 0;
+  margin: 0 auto;
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 100%;
@@ -34,7 +34,6 @@ p {
 /* Jumbotron */
 
 
-
 .jumbotron {
   border-radius: 0px;
   background: #ff580a;
@@ -43,7 +42,7 @@ p {
 }
 
 #jumbo-content {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 

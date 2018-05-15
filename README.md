@@ -1,4 +1,4 @@
-# Menu-Manager
+# MenuHeist
 An app that collects all of your favorite menus in one conveniently located place.
 
 ## Getting Started

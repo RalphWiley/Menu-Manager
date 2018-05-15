@@ -6,7 +6,6 @@ html {
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 100%;
-  
 }
 
 .navbar-toggler {
@@ -17,8 +16,10 @@ html {
   font-family: 'Pacifico', cursive;
 }
 
-
-h1, h2, h4, h5 {
+h1,
+h2,
+h4,
+h5 {
   font-family: 'Roboto Slab', serif;
 }
 
@@ -33,7 +34,6 @@ p {
 
 /* Jumbotron */
 
-
 .jumbotron {
   border-radius: 0px;
   background: #ff580a;
@@ -45,12 +45,12 @@ p {
   margin-top: 50px;
 }
 
-
-#v-pills-tab1-tab , #v-pills-tab2-tab {
+#v-pills-tab1-tab,
+#v-pills-tab2-tab {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  }
+}
 
 .container-main {
   background: #007bff;
@@ -75,9 +75,8 @@ p {
   border-radius: 0;
 }
 
-
-
-.button:focus,.btn:active {
+.button:focus,
+.btn:active {
   outline: none !important;
   box-shadow: none;
 }
@@ -97,7 +96,6 @@ p {
 #favorites {
   background: #e71717;
 }
-
 
 /* Search Bar */
 
@@ -190,3 +188,4 @@ var {
   max-height: 75px;
   object-fit: cover;
 }
+

@@ -81,6 +81,11 @@ p {
   box-shadow: none;
 }
 
+.card {
+
+  border-radius: 0 !important;
+}
+
 /* Sign In Form */
 
 .navbar .dropdown-menu .form-control {
@@ -142,7 +147,7 @@ hr {
 
 /* favorites layout box */
 
-.param {
+/* .param {
   margin-bottom: 7px;
   line-height: 1.4;
 }
@@ -187,5 +192,5 @@ var {
   width: 90px;
   max-height: 75px;
   object-fit: cover;
-}
+} */
 

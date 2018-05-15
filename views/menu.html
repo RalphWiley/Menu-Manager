@@ -2,31 +2,22 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <!-- Bootstrap stylesheet -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
-
     <!-- Google Fonts and Font Awesome stylesheet -->
-
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:400|Roboto+Slab:400" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-
     <!-- Main stylesheet -->
-    <link rel="stylesheet" type="text/css" href="../public/assets/css/menu_style.css">
-
+    <link rel="stylesheet" type="text/css" href="../public/css/menu_style.css">
     <title>Document</title>
-
 </head>
 
 <body>
-
     <!-- NavBar -->
-
     <nav class="navbar  navbar-expand-lg navbar-inverse navbar-custom fixed-top" role="navigation">
         <div class="container">
             <a class="navbar-brand text-white" href="#">MenuHeist</a>
@@ -39,10 +30,6 @@
                         <a href="#" class="nav-link"></a>
                     </li>
                 </ul>
-
-                <!-- Login Dropdown -->
-
-
                 <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
                     <li class="dropdown order-1">
                         <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn  dropdown-toggle text-white">Login
@@ -73,9 +60,6 @@
             </div>
         </div>
     </nav>
-
-    <!-- Forgot Password Modal -->
-
     <div id="modalPassword" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -93,27 +77,23 @@
             </div>
         </div>
     </div>
-
     <!-- End NavBar -->
-
     <!-- Jumbotron -->
-    <div class="jumbotron">
     <div class="container-fluid jumbo-container">
+        <div class="jumbotron">
             <div class="container" id="jumbo-content">
                 <h1 class="text-center display-4 text-white">Your favorite menu starts here.</h1>
                 <h3 class="text-center text-white">Find and save your favorite restaurant menus</h3>
             </div>
-
             <br>
             <!-- Search Bar -->
-
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-8">
                         <div class="input-group" id="search-bar">
-                            <input class="form-control" type="search" placeholder="search">
+                            <input class="form-control" type="search" id="searchRestaurant" placeholder="search">
                             <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
+                                <button class="btn btn-primary" type="button" id="findRestaurant">
                                     <i class="fa fa-search"></i>
                                 </button>
                             </div>
@@ -125,41 +105,34 @@
     </div>
     </div>
     <!-- End Search Bar -->
-
     <!-- Main-Content -->
-
     <div class="container">
         <div class="main-content">
             <div class="card">
                 <div class="card-body">
                     <div class="row">
-                        
-                        <!-- Navigation in Main Body -->
 
-                            <div class="nav nav-pills flex-column col-sm-12 col-md-12 col-lg-2 mb-3" id="v-pills-tab" role="tablist">
-                                <a class="nav-link active" id="v-pills-tab1-tab" data-toggle="pill" href="#v-pills-tab1" role="tab" aria-controls="v-pills-tab1"
-                                    aria-expanded="true">
-                                    <i class="fa fa-table"></i>&nbspMenus</a>
-                                <a class="nav-link" id="v-pills-tab2-tab" data-toggle="pill" href="#v-pills-tab2" role="tab" aria-controls="v-pills-tab2"
-                                    aria-expanded="true">
-                                    <i class="fa fa-star"></i>&nbspFavorites</a>
-                                
+                        <div class="nav nav-pills flex-column col-sm-12 col-md-12 col-lg-2 mb-3" id="v-pills-tab" role="tablist">
+                            <a class="nav-link active" id="v-pills-tab1-tab" data-toggle="pill" href="#v-pills-tab1" role="tab" aria-controls="v-pills-tab1"
+                                aria-expanded="true">
+                                <i class="fa fa-table"></i>&nbspMenus</a>
+                            <a class="nav-link" id="v-pills-tab2-tab" data-toggle="pill" href="#v-pills-tab2" role="tab" aria-controls="v-pills-tab2"
+                                aria-expanded="true">
+                                <i class="fa fa-star"></i>&nbspFavorites</a>
+
                         </div>
-                        <div class="col-sm-12 col-md-10">
+                        <div class="col-sm-10 col-md-10 col-lg-10">
                             <div class="tab-content" id="v-pills-tabContent">
                                 <div class="tab-pane fade show active" id="v-pills-tab1" role="tabpanel" aria-labelledby="v-pills-home-tab">
-
                                     <div class="card">
-                                        
                                         <div class="card-header">
                                             Menu Results
                                         </div>
-
                                         <div class="d-flex justify-content-between" id="menu-restaurant-title"></div>
                                         <div class="card-body">
                                             <div class="row justify-content-between">
                                                 <div class="col-8">
-                                                    <h1 id="title"></h1>
+                                                    <h4 id="title"></h4>
                                                     <p id="description"></p>
                                                 </div>
                                                 <div class="col-4 text-right">
@@ -168,22 +141,14 @@
                                                     </a>
                                                 </div>
                                             </div>
-
-
                                             <!-- Menu Table -->
-
                                             <div class="d-flex justify-content-between" id="menu-restaurant-title">
-
-
-
                                                 <div class="row">
-
-                                                    <div class="col-sm-12" id="soup-salad">
+                                                    <div class="col-sm-12">
                                                         <hr id="menu-horizontal-rule-1">
                                                         <h4 id="dish"></h4>
                                                         <p id="itemDescription"></p>
                                                     </div>
-
                                                     <div class="col-sm-12">
                                                         <hr id="menu-horizontal-rule-2">
                                                     </div>
@@ -194,7 +159,6 @@
                                                         <hr>
                                                     </div>
                                                     <div class="col-sm-6" id="entrees">
-
                                                         <h5>Q House Salad with Side</h5>
                                                         <p>Cherry tomatoes, pickled onion, cucumber, sharp cheddar, garlic croutons,
                                                             balsamic herb vinaigrette add sliced brisket, pulled pork or
@@ -204,29 +168,20 @@
                                                     </div>
                                                     <a id="website"></a>
                                                 </div>
-
-
                                                 <!-- End Menu -->
-
                                             </div>
                                         </div>
-                                    
                                     </div>
                                 </div>
-
                                 <!-- Favorites Card -->
-
                                 <div class="tab-pane fade" id="v-pills-tab2" role="tabpanel" aria-labelledby="v-pills-tab2-tab">
-
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="card">
                                                 <div class="card-header">
                                                     Favorite Restaurants
                                                 </div>
-
                                                 <!-- Favorite Restaurant Card Info -->
-
                                                 <div class="card-body">
                                                     <div class="row justify-content-between">
                                                         <div class="col-8">
@@ -239,20 +194,12 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
                                                 <!-- End Restaurant Card Info -->
-
                                             </div>
-
                                         </div>
-
                                     </div>
-
                                 </div>
-
-
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -260,11 +207,6 @@
         </div>
     </div>
     </div>
-
-    <br>
-    <br>
-    <br>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
@@ -272,9 +214,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
     <script src="../controllers/menu_controller.js"></script>
-
 </body>
-
-
 
 </html>

@@ -1,0 +1,192 @@
+body,
+html {
+  background: #ffffff;
+  height: 100%;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  
+}
+
+.navbar-toggler {
+  color: #ffffff;
+}
+
+.navbar-brand {
+  font-family: 'Pacifico', cursive;
+}
+
+
+h1, h2, h4, h5 {
+  font-family: 'Roboto Slab', serif;
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+}
+
+/* Jumbotron */
+
+
+.jumbotron {
+  border-radius: 0px;
+  background: #ff580a;
+  /* background:url('../css/hamburger.jpg') no-repeat center; */
+  margin-bottom: 0;
+}
+
+#jumbo-content {
+  margin-top: 50px;
+}
+
+
+#v-pills-tab1-tab , #v-pills-tab2-tab {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  }
+
+.container-main {
+  background: #007bff;
+}
+
+.main-content {
+  background: #007bff;
+  height: 100%;
+  margin-top: 30px;
+}
+
+.navbar-custom {
+  background-color: #ff580a;
+}
+
+#dropdownMenu1 {
+  outline: none !important;
+  background-color: #ff580a;
+  outline: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+
+
+.button:focus,.btn:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+/* Sign In Form */
+
+.navbar .dropdown-menu .form-control {
+  width: 200px;
+}
+
+/* Tabbed Container */
+
+#menus {
+  background: #ffffff;
+}
+
+#favorites {
+  background: #e71717;
+}
+
+
+/* Search Bar */
+
+#search-bar {
+  margin-bottom: 50px;
+  outline: 0 none;
+}
+
+.btn.dropdown-toggle {
+  outline: none !important;
+}
+
+hr {
+  width: 90%;
+}
+
+#menu-horizontal-rule-1 {
+  width: 100%;
+  display: block;
+  border-top: 1px solid rgb(204, 204, 204);
+}
+
+#menu-horizontal-rule-2 {
+  width: 100%;
+  display: block;
+  border-top: 1px solid #ccc;
+}
+
+#restaurant-name {
+  background-color: #eeeeee;
+  height: 75px;
+  margin: auto;
+}
+
+#soup-salad {
+  margin-top: 10px;
+}
+
+/* when not active use specificity to override the !important on border-(color) */
+
+.nav-tabs .nav-link:not(.active) {
+  border-color: transparent !important;
+}
+
+/* favorites layout box */
+
+.param {
+  margin-bottom: 7px;
+  line-height: 1.4;
+}
+
+.param-inline dt {
+  display: inline-block;
+}
+
+.param dt {
+  margin: 0;
+  margin-right: 7px;
+  font-weight: 600;
+}
+
+.param-inline dd {
+  vertical-align: baseline;
+  display: inline-block;
+}
+
+.param dd {
+  margin: 0;
+  vertical-align: baseline;
+}
+
+.shopping-cart-wrap .price {
+  color: #007bff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 5px;
+  display: block;
+}
+
+var {
+  font-style: normal;
+}
+
+.media img {
+  margin-right: 1rem;
+}
+
+.img-sm {
+  width: 90px;
+  max-height: 75px;
+  object-fit: cover;
+}

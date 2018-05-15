@@ -1,4 +1,4 @@
-# Menu-Manager
+# MenuHeist
 An app that collects all of your favorite menus in one conveniently located place.
 
 ## Getting Started
@@ -22,4 +22,4 @@ An app that collects all of your favorite menus in one conveniently located plac
   - [Nick Keith](https://github.com/RalphWiley)
   
 ## Acknowledgements
-  - Thanks to Ryan LaRue, Lawrence Williams, Jacob Sullivan and Byron Ferguson.
+  - Thanks to Ryan LaRue, Lawrence Williams, Jacob Sullivan, Garrett Lietzen and Byron Ferguson.

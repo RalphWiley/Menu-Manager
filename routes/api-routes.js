@@ -17,15 +17,13 @@ router = express.Router();
   // GET route for getting all of the favorites
   router.get("/api/Favorite", function(req, res) {
     var query = {};
-    if (req.query.Favorite_id) {
-      query.FavoriteId = req.query.Favorite_id;
-    }
 
-    db.Post.findAll({
-      where: query,
-      include: [db.UserMenus]
-    }).then(function(dbPost) {
-      res.json(dbPost);
+    db.Favorite.findAll({
+      where : {
+        userId : req.user.id
+      }
+    }).then(function(dbFavorite) {
+      res.json(dbFavorite);
     });
   });
 
@@ -34,13 +32,12 @@ router = express.Router();
     // Here we add an "include" property to our options in our findOne query
     // We set the value to an array of the models we want to include in a left outer join
     // In this case, just db.Favorite
-    db.UserMenus.findAll({
+    db.Favorite.findAll({
       where: {
         id: req.params.id
       },
-      include: [db.UserMenus]
-    }).then(function(dbPost) {
-      res.json(dbPost);
+    }).then(function(dbFavorite) {
+      res.json(dbFavorite);
     });
   });
 
@@ -66,14 +63,14 @@ router = express.Router();
       where: {
         id: req.params.id
       }
-    }).then(function(dbPost) {
-      res.json(dbPost);
+    }).then(function(dbFavorite) {
+      res.json(dbFavorite);
     });
   });
 
   // PUT route for updating posts
   router.put("/api/Favorite", function(req, res) {
-    db.Post.update(
+    db.Favorite.update(
       req.body,
       {
         where: {

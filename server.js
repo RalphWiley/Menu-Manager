@@ -5,7 +5,7 @@ var session = require('express-session');
 var bodyParser = require('body-parser');
 var env = require('dotenv').load();
 var exphbs = require('express-handlebars')
-var PORT = process.env.PORT || 3306;
+
 //For BodyParser
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -20,11 +20,9 @@ app.use(passport.session()); // persistent login sessions
 app.set('views', './views')
 app.engine('hbs', exphbs({ extname: '.hbs' }));
 app.set('view engine', '.hbs');
-require('./routes/htmlroutes')(app);
 
 
-
-app.get('/', function (req, es) {
+app.get('/', function (req, res) {
     res.render();
 });
 
@@ -54,8 +52,11 @@ models.sequelize.sync({}).then(function () {
 app.use(express.static('public'));
 app.use(express.static('controllers'));
 
-app.listen(PORT, () => {
-    console.log(`App listening on PORT ${PORT}`);
+app.listen(5000, function (err) {
+    if (!err)
+    console.log("Site is live");
+    else console.log(err)
+
 });
 
 

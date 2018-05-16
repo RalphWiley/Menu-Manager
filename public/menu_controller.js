@@ -65,19 +65,48 @@ $(".favorite").click(function (event) {
 
 });
 
-$(".fa-star").click(function (event) {
-  event.preventDefault();
-  $.get("/api/Favorites");
-  $("#ftitle").text(restaurant);
-  $("fdescription").text(description);
-  $("#fdish").text(dish);
-  $("#fitemDescription").text(itemDescription);
-  $("#fwebsite").attr(website);
+function createFavoriteRow(favoriteData) {
+  var newDiv = $("<div>");
+  newDiv.append("favorite", favoriteData);
+  newDiv.append("<h3>" + favoriteData.restaurant + "</h3>");
+  newDiv.append("<h4> " + favoriteData.description + "</h4>");
+  newDiv.append("<h3> " + favoriteData.dish + "</h3>");
+  newDiv.append("<h4> " + favoriteData.itemDescription + "</h4>");
+  newDiv.append("<h3> " + favoriteData.dish1 + "</h3>");
+  newDiv.append("<p> " + favoriteData.website + "</p>");
+  return newDiv;
+}
+
+$("#v-pills-tab2-tab").click(function (event) {
+  function getFavorites() {
+  $.get("/api/Favorite", function(data) {
+    var rowsToAdd = [];
+  for (var i = 0; i <data.length; i++) {
+    rowsToAdd.push(createFavoriteRow(data[i]));
+  }
+  renderFavoriteList(rowsToAdd);
+  })}
+getFavorites();
 });
+
+  function renderFavoriteList(rows) {
+    if (rows.length) {
+      console.log(rows);
+      $("#pleasework").html(rows);
+    }
+    else {
+      renderEmpty();
+    }
+  }
 
 $(".fa-trash").click(function (event) {
   event.preventDefault();
   $.delete("/api/Favorite/:id", menu)
-
+  var listItemData = $(this).parent("td").parent("tr").data("Favorite");
+  var id = listItemData.id;
+  $.ajax({
+    method: "DELETE",
+    url: "/api/Favorite/" + id
+  })
+    .then(getFavorites);
 });
-

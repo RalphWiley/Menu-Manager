@@ -9,6 +9,11 @@ An app that collects all of your favorite menus in one conveniently located plac
 ## Technologies Used
   - MySQL
   - NPM Packages
+  - Sequelize
+  - Express
+  - Handlebars
+  - OpenMenu API 
+  - Passport
   
 ## Built With
   - Visual Studio - Text Editor

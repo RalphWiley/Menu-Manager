@@ -12,14 +12,17 @@ function searchRestaurant(restaurant) {
     var dig = response;
     // Printing the entire object to console
     console.log(dig.response);
+    for (var i = 0; i < dig.response.result.menus.length; i++) {
+      $("#dish").text(dig.response.result.menus[0].items[i].menu_item_name);
+      $("#itemDescription").text(dig.response.result.menus[0].items[i].menu_item_description);
+    }
   
     // Constructing HTML containing the restaurant information
     $("#title").text(dig.response.result.restaurants[0].restaurant_name);
     $("#description").text(dig.response.result.restaurants[0].brief_description);
-    $("#dish").text(dig.response.result.menus[0].items[0].menu_item_name);
-    $("#itemDescription").text(dig.response.result.menus[0].items[0].menu_item_description);
+
     
-    $("#website").attr("href", dig.response.result.restaurants[0].website_url).append(restaurant + "'s Website");
+    $("#website").attr("href", dig.response.result.restaurants[0].website_url).text(restaurant + "'s Website");
   });
 }
 

@@ -4,9 +4,9 @@
  
         "username": "root",
  
-        "password": "0108C@denc3",
+        "password": "",
  
-        "database": "sequelize_passport",
+        "database": "animals",
  
         "host": "127.0.0.1",
  

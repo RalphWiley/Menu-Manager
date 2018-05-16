@@ -18,6 +18,16 @@ function searchRestaurant(restaurant) {
     $("#description").text(dig.response.result.restaurants[0].brief_description);
     $("#dish").text(dig.response.result.menus[0].items[0].menu_item_name);
     $("#itemDescription").text(dig.response.result.menus[0].items[0].menu_item_description);
+    $("#dish1").text(dig.response.result.menus[0].items[1].menu_item_name);
+    $("#itemDescription1").text(dig.response.result.menus[0].items[1].menu_item_description);
+    $("#dish2").text(dig.response.result.menus[0].items[2].menu_item_name);
+    $("#itemDescription2").text(dig.response.result.menus[0].items[2].menu_item_description);
+    $("#dish3").text(dig.response.result.menus[0].items[3].menu_item_name);
+    $("#itemDescription3").text(dig.response.result.menus[0].items[3].menu_item_description);
+    $("#dish4").text(dig.response.result.menus[0].items[4].menu_item_name);
+    $("#itemDescription4").text(dig.response.result.menus[0].items[4].menu_item_description);
+    $("#dish5").text(dig.response.result.menus[0].items[5].menu_item_name);
+    $("#itemDescription5").text(dig.response.result.menus[0].items[5].menu_item_description);
     $("#website").attr("href", dig.response.result.restaurants[0].website_url).text(restaurant + "'s Website");
   });
 }
@@ -39,6 +49,16 @@ $(".favorite").click(function (event) {
     description: $("#description").text(),
     dish: $("#dish").text(),
     itemDescription: $("#itemDescription").text(),
+    dish1: $("#dish1").text(),
+    itemDescription1: $("#itemDescription1").text(),
+    dish2: $("#dish2").text(),
+    itemDescription2: $("#itemDescription2").text(),
+    dish3: $("#dish3").text(),
+    itemDescription3: $("#itemDescription3").text(),
+    dish4: $("#dish4").text(),
+    itemDescription4: $("#itemDescription4").text(),
+    dish4: $("#dish4").text(),
+    itemDescription4: $("#itemDescription4").text(),
     website: $("#website").text(),
   }
   $.post("api/Favorite", menu)

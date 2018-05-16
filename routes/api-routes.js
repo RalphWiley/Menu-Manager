@@ -5,40 +5,83 @@
 // Dependencies
 // =============================================================
 
-// grab the orm from the config
-// (remember: connection.js -> orm.js -> route file)
-var orm = require("../config/orm.js");
+// Requiring our models
+var db = require("../models");
+var express = require('express');
+
+router = express.Router();
 
 // Routes
 // =============================================================
-module.exports = function(app) {
 
-  // GET route for getting all of the todos
-  app.get("/api/todos", function(req, res) {
-    orm.getTodos(function(results) {
-      res.json(results);
+  // GET route for getting all of the favorites
+  router.get("/api/Favorite", function(req, res) {
+    var query = {};
+    if (req.query.Favorite_id) {
+      query.FavoriteId = req.query.Favorite_id;
+    }
+
+    db.Post.findAll({
+      where: query,
+      include: [db.UserMenus]
+    }).then(function(dbPost) {
+      res.json(dbPost);
     });
   });
 
-  // POST route for saving a new todo. We can create a todo using the data on req.body
-  app.post("/api/todos", function(req, res) {
-    orm.addTodo(req.body, function(results) {
-      res.json(results);
+  // Get route for retrieving a single post
+  router.get("/api/Favorite/:id", function(req, res) {
+    // Here we add an "include" property to our options in our findOne query
+    // We set the value to an array of the models we want to include in a left outer join
+    // In this case, just db.Favorite
+    db.UserMenus.findAll({
+      where: {
+        id: req.params.id
+      },
+      include: [db.UserMenus]
+    }).then(function(dbPost) {
+      res.json(dbPost);
     });
   });
 
-  // DELETE route for deleting todos. We can access the ID of the todo to delete in
-  // req.params.id
-  app.delete("/api/todos/:id", function(req, res) {
-    orm.deleteMenu(req.params.id, function(results) {
-      res.json(results);
+  // POST route for saving a new post
+  router.post("/api/Favorite", function(req, res) {
+    var newFavorite = {
+      restaurant : req.body.restaurant,
+      description : req.body.description,
+      dish : req.body.dish,
+      itemDescription : req.body.itemDescription,
+      website : req.body.website,
+      userId  : req.user.id
+    }
+    db.Favorite.create(newFavorite).then(function(dbPost) {
+      console.log(dbPost);
+      res.json(dbPost);
     });
   });
 
-  // PUT route for updating todos. We can access the updated todo in req.body
-  app.put("/api/todos", function(req, res) {
-    orm.editTodo(req.body, function(results) {
-      res.json(results);
+  // DELETE route for deleting posts
+  router.delete("/api/Favorite/:id", function(req, res) {
+    db.Post.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbPost) {
+      res.json(dbPost);
     });
   });
-};
+
+  // PUT route for updating posts
+  router.put("/api/Favorite", function(req, res) {
+    db.Post.update(
+      req.body,
+      {
+        where: {
+          id: req.body.id
+        }
+      }).then(function(dbPost) {
+      res.json(dbPost);
+    });
+  });
+
+  module.exports = router;

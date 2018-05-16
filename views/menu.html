@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:400|Roboto+Slab:400" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
     <!-- Main stylesheet -->
-    <link rel="stylesheet" type="text/css" href="../public/css/menu_style.css">
+    <link rel="stylesheet" type="text/css" href="css/menu_style.css">
     <title>Document</title>
 </head>
 
@@ -79,8 +79,8 @@
     </div>
     <!-- End NavBar -->
     <!-- Jumbotron -->
+    <div class="jumbotron">
     <div class="container-fluid jumbo-container">
-        <div class="jumbotron">
             <div class="container" id="jumbo-content">
                 <h1 class="text-center display-4 text-white">Your favorite menu starts here.</h1>
                 <h3 class="text-center text-white">Find and save your favorite restaurant menus</h3>
@@ -136,7 +136,7 @@
                                                     <p id="description"></p>
                                                 </div>
                                                 <div class="col-4 text-right">
-                                                    <a title="" href="" class="btn btn-success" data-toggle="tooltip" data-placement="Save to Favorites">
+                                                    <a title="" href="" class="btn btn-success favorite" data-toggle="tooltip" data-placement="Save to Favorites">
                                                         <i class="fa fa-star" title="Add to favorites"></i>
                                                     </a>
                                                 </div>
@@ -188,15 +188,30 @@
                                                             <h4>Restaurant Name</h4>
                                                         </div>
                                                         <div class="col-4 text-right">
-                                                            <a title="" href="" class="btn btn-danger" data-toggle="tooltip" data-original-title="Save to Favorites">
+                                                            <class="btn btn-danger" data-toggle="tooltip" data-original-title="Delete">
                                                                 <i class="fa fa-trash"></i>
                                                             </a>
                                                         </div>
                                                     </div>
+                                                    <!-- Menu Table -->
+                                                    <div class="d-flex justify-content-between" id="favorite-restaurant-title">
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <hr id="menu-horizontal-rule-1">
+                                                                <h4 id="fdish"></h4>
+                                                                <p id="fitemDescription"></p>
+                                                            </div>
+                                                            <div class="col-sm-12">
+                                                                <hr id="menu-horizontal-rule-2">
+                                                            </div>
+                                                            <a id="fwebsite"></a>
+                                                        </div>
+                                                        <!-- End Menu -->
+                                                    </div>
                                                 </div>
-                                                <!-- End Restaurant Card Info -->
                                             </div>
                                         </div>
+                                        <!-- End Restaurant Card Info -->
                                     </div>
                                 </div>
                             </div>
@@ -206,14 +221,13 @@
             </div>
         </div>
     </div>
-    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
-    <script src="../controllers/menu_controller.js"></script>
+    <script src="menu_controller.js"></script>
 </body>
 
 </html>

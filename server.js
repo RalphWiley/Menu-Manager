@@ -5,7 +5,7 @@ var session = require('express-session');
 var bodyParser = require('body-parser');
 var env = require('dotenv').load();
 var exphbs = require('express-handlebars')
-var PORT = process.env.PORT || 3306;
+
 //For BodyParser
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -26,9 +26,12 @@ app.get('/', function (req, res) {
     res.render();
 });
 
+var routes = require('./routes/api-routes');
+
+app.use(routes);
 
 //Models
-var models = require("./models");
+var models = require("./models/index.js");
 
 //Routes
 var authRoute = require('./routes/auth.js')(app, passport);
@@ -39,17 +42,21 @@ var authRoute = require('./routes/auth.js')(app, passport);
 require('./config/passport/passport.js')(passport, models.User);
 
 //Sync Database
-models.sequelize.sync().then(function () {
+models.sequelize.sync({}).then(function () {
     console.log('Nice! Database looks fine')
 
 }).catch(function (err) {
     console.log(err, "Something went wrong with the Database Update!")
 });
 
+app.use(express.static('public'));
+app.use(express.static('controllers'));
 
-app.listen(PORT, function (err) {
+app.listen(5000, function (err) {
     if (!err)
     console.log("Site is live");
     else console.log(err)
 
 });
+
+

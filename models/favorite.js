@@ -5,17 +5,23 @@ module.exports = (Sequelize, DataTypes) => {
     restaurant: {
       type: DataTypes.STRING,
     },
-    itemName: {
-      type: DataTypes.STRING,
-    },
     description: {
       type: DataTypes.STRING,
     },
+    dish: {
+      type: DataTypes.STRING,
+    },
+    itemDescription: {
+      type: DataTypes.STRING,
+    },
+    website: {
+      type: DataTypes.STRING,
+    }
   });
 
   Favorite.associate = (models) => {
-    Favorite.belongsToMany(models.User, {
-      through: 'UserFavorite',
+    Favorite.belongsTo(models.User, {
+      foreignKey: 'userId',
       onDelete: 'CASCADE',
     })
   };

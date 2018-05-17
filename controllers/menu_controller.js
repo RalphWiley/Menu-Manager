@@ -12,12 +12,9 @@ function searchRestaurant(restaurant) {
     var dig = response;
     // Printing the entire object to console
     console.log(dig.response);
-    for (var i = 0; i < dig.response.result.menus.length; i++) {
+
       $("#dish").text(dig.response.result.menus[0].items[i].menu_item_name);
       $("#itemDescription").text(dig.response.result.menus[0].items[i].menu_item_description);
-    }
-  
-    // Constructing HTML containing the restaurant information
     $("#title").text(dig.response.result.restaurants[0].restaurant_name);
     $("#description").text(dig.response.result.restaurants[0].brief_description);
 

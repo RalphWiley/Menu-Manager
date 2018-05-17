@@ -57,8 +57,8 @@ $(".favorite").click(function (event) {
     itemDescription3: $("#itemDescription3").text(),
     dish4: $("#dish4").text(),
     itemDescription4: $("#itemDescription4").text(),
-    dish4: $("#dish4").text(),
-    itemDescription4: $("#itemDescription4").text(),
+    dish5: $("#dish5").text(),
+    itemDescription5: $("#itemDescription4").text(),
     website: $("#website").text(),
   }
   $.post("api/Favorite", menu)
